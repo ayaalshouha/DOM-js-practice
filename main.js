@@ -42,5 +42,34 @@ header.style.cssText =
 document.body.appendChild(header);
 
 //create content section
-
 let content = document.createElement("section");
+content.style.cssText =
+  "display:grid; gap:5px; grid-template-columns:repeat(auto-fill, minmax(130px, 1fr)); background-color:lightgrey;padding: 5px;";
+
+for (let i = 0; i < 15; i++) {
+  let product_box = document.createElement("div");
+  let product_num = document.createElement("span");
+  let product_title = document.createElement("p");
+  let product_num_text = document.createTextNode(`${i + 1}`);
+  let product_title_text = document.createTextNode("Product");
+
+  product_num.appendChild(product_num_text);
+  product_num.className = "product-num"; 
+  product_title.appendChild(product_title_text);
+  product_title.className = "product-title"; 
+
+  product_num.style.cssText="font-family: arial; font-weight: bold; font-size: 15px; padding:0;margin:0px;"; 
+  product_title.style.cssText = "font-family: arial; font-size:10px; color: #777; padding:0; margin:0;"; 
+  
+  product_box.appendChild(product_num);
+  product_box.appendChild(product_title);
+  product_box.className = "product";
+
+  product_box.style.cssText =
+    "background-color: white; color: black; display:flex; flex-direction:column;align-items: center; padding:5px 50px;border-radius:3px;";
+  content.appendChild(product_box);
+}
+
+document.body.appendChild(content);
+
+
