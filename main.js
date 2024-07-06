@@ -54,13 +54,15 @@ for (let i = 0; i < 15; i++) {
   let product_title_text = document.createTextNode("Product");
 
   product_num.appendChild(product_num_text);
-  product_num.className = "product-num"; 
+  product_num.className = "product-num";
   product_title.appendChild(product_title_text);
-  product_title.className = "product-title"; 
+  product_title.className = "product-title";
 
-  product_num.style.cssText="font-family: arial; font-weight: bold; font-size: 15px; padding:0;margin:0px;"; 
-  product_title.style.cssText = "font-family: arial; font-size:10px; color: #777; padding:0; margin:0;"; 
-  
+  product_num.style.cssText =
+    "font-family: arial; font-weight: bold; font-size: 15px; padding:0;margin:0px;";
+  product_title.style.cssText =
+    "font-family: arial; font-size:10px; color: #777; padding:0; margin:0;";
+
   product_box.appendChild(product_num);
   product_box.appendChild(product_title);
   product_box.className = "product";
@@ -72,4 +74,4 @@ for (let i = 0; i < 15; i++) {
 
 document.body.appendChild(content);
 
-
+//footer section
