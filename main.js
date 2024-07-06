@@ -44,7 +44,7 @@ document.body.appendChild(header);
 //create content section
 let content = document.createElement("section");
 content.style.cssText =
-  "display:grid; gap:5px; grid-template-columns:repeat(auto-fill, minmax(130px, 1fr)); background-color:lightgrey;padding: 5px;";
+  "display:grid; gap:10px; grid-template-columns:repeat(auto-fill, minmax(130px, 1fr)); background-color:lightgrey;padding: 5px;";
 
 for (let i = 0; i < 15; i++) {
   let product_box = document.createElement("div");
@@ -68,10 +68,19 @@ for (let i = 0; i < 15; i++) {
   product_box.className = "product";
 
   product_box.style.cssText =
-    "background-color: white; color: black; display:flex; flex-direction:column;align-items: center; padding:5px 50px;border-radius:3px;";
+    "background-color: white; color: black; display:flex; flex-direction:column;align-items: center; padding:8px 55px;";
   content.appendChild(product_box);
 }
 
 document.body.appendChild(content);
 
 //footer section
+
+let footer = document.createElement("div"); 
+let footer_text = document.createTextNode("Copyright 2021"); 
+
+footer.appendChild(footer_text); 
+
+footer.style.cssText = "text-align: center; padding-top:5px; width:100%; height: 30px;background-color: green;  color:white; font-family:arial;"; 
+
+document.body.append(footer); 
