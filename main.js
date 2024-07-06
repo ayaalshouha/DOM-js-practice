@@ -1,5 +1,6 @@
-//create header section
+document.body.style.cssText = "font-family: arial; padding:0; margin:0;";
 
+//create header section
 let header = document.createElement("header");
 let header_title = document.createElement("span");
 let header_menu = document.createElement("ul");
@@ -27,8 +28,7 @@ header_menu.appendChild(header_menu_li4);
 
 header_menu.style.cssText =
   "list-style:none; display:flex; justify-content:space-between; gap:7px;color:#777;";
-header_title.style.cssText =
-  "color: green; font-weight:bold; font-family:arial;font-size:18px;";
+header_title.style.cssText = "color: green; font-weight:bold;font-size:18px;";
 header.appendChild(header_title);
 header.appendChild(header_menu);
 
@@ -38,7 +38,6 @@ header_menu.className = "header-menu";
 
 header.style.cssText =
   "display: flex; justify-content: space-between; align-items: center;";
-
 
 //create content section
 let content = document.createElement("section");
@@ -58,9 +57,9 @@ for (let i = 0; i < 15; i++) {
   product_title.className = "product-title";
 
   product_num.style.cssText =
-    "font-family: arial; font-weight: bold; font-size: 15px; padding:0;margin:0px;";
+    "font-weight: bold; font-size: 15px;";
   product_title.style.cssText =
-    "font-family: arial; font-size:10px; color: #777; padding:0; margin:0;";
+    "font-size:10px; color: #777; padding:0; margin:0;";
 
   product_box.appendChild(product_num);
   product_box.appendChild(product_title);
@@ -71,15 +70,14 @@ for (let i = 0; i < 15; i++) {
     "background-color: white; color: black; display:flex; flex-direction:column;align-items: center; padding:8px 55px;";
 }
 
-
 //footer section
 
-let footer = document.createElement("div"); 
-let footer_text = document.createTextNode("Copyright 2021"); 
-footer.appendChild(footer_text); 
-footer.style.cssText = "text-align: center; padding-top:5px; width:100%; height: 30px;background-color: green; color:white; font-family:arial;"; 
-
+let footer = document.createElement("div");
+let footer_text = document.createTextNode("Copyright 2021");
+footer.appendChild(footer_text);
+footer.style.cssText =
+  "text-align: center; padding-top:5px; width:100%; height: 30px;background-color: green; color:white;";
 
 document.body.appendChild(header);
 document.body.appendChild(content);
-document.body.append(footer); 
+document.body.append(footer);
